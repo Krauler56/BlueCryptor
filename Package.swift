@@ -31,21 +31,21 @@ var targetDependencies: [Target.Dependency] = []
 #endif
 
 let package = Package(
-    name: "Cryptor",
+    name: "BlueCryptor",
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "Cryptor",
-            targets: ["Cryptor"]),
+            name: "BlueCryptor",
+            targets: ["BlueCryptor"]),
         ],
     dependencies: dependencies,
     targets: [
         .target(
-            name: "Cryptor",
+            name: "BlueCryptor",
             dependencies: targetDependencies,
             exclude: ["Info.plist"]),
         .testTarget(
-            name: "CryptorTests",
-            dependencies: ["Cryptor"]),
+            name: "BlueCryptorTests",
+            dependencies: ["BlueCryptor"]),
     ]
 )
